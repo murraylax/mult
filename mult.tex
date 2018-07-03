@@ -1,0 +1,182 @@
+\documentclass[12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{calc}
+\usepackage{setspace}
+\usepackage{multicol}
+\usepackage{fancyheadings}
+
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{rotating}
+\usepackage{harvard}
+\usepackage{aer}
+\usepackage{aertt}
+\usepackage{verbatim}
+
+\setlength{\voffset}{0in}
+\setlength{\topmargin}{0pt}
+\setlength{\hoffset}{0pt}
+\setlength{\oddsidemargin}{0pt}
+\setlength{\headheight}{0pt}
+\setlength{\headsep}{.4in}
+\setlength{\marginparsep}{0pt}
+\setlength{\marginparwidth}{0pt}
+\setlength{\marginparpush}{0pt}
+\setlength{\footskip}{.1in}
+\setlength{\textwidth}{6.5in}
+\setlength{\textheight}{8.5in}
+\setlength{\parskip}{0pc}
+
+\renewcommand{\baselinestretch}{1.5}
+
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bd}{\begin{description}}
+\newcommand{\ed}{\end{description}}
+\newcommand{\prbf}[1]{\textbf{#1}}
+\newcommand{\prit}[1]{\textit{#1}}
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\newcommand{\beqa}{\begin{eqnarray}}
+\newcommand{\eeqa}{\end{eqnarray}}
+\newcommand{\bdm}{\begin{displaymath}}
+\newcommand{\edm}{\end{displaymath}}
+\newcommand{\script}[1]{\begin{cal}#1\end{cal}}
+\newcommand{\citee}[1]{\citename{#1} (\citeyear{#1})}
+\newcommand{\h}[1]{\hat{#1}}
+\newcommand{\ds}{\displaystyle}
+
+
+\newcommand{\appsection}[1]
+{
+\let\oldthesection\thesection
+\renewcommand{\thesection}{Appendix \oldthesection:}
+\section{#1}
+\let\thesection\oldthesection
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+\setcounter{equation}{0}
+}
+
+\pagestyle{fancyplain}
+\lhead{}
+\chead{Fiscal and Expenditure Multipliers with Adaptive Expectations}
+\rhead{\thepage}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+
+\begin{document}
+
+\begin{titlepage}
+\begin{singlespace}
+\title{Fiscal and Expenditure Multipliers When There are Adaptive Expectations}
+\date{\today}
+\author{James Murray\\
+Department of Economics\\
+University of Wisconsin - La Crosse\footnote{\textit{Mailing address}: 1725 State St., La Crosse, WI  54601. \textit{E-mail address}: murray.jame@uwlax.edu.  \textit{Phone number}: (608)406-4068.}}
+
+\maketitle
+
+\thispagestyle{empty}
+
+\abstract{Using linearized dynamic macroeconomics models with rational expectations is the most common modeling strategy in the macroeconomics and monetary economics literature for answering questions related to the causes of business cycle fluctuations and/or the effectiveness of monetary and fiscal policy at fixing short-run problems such as recessionary and inflationary episodes.  The predictions of this model for how macroeconomic shocks (such as technology shocks, demand shocks, cost shocks, and monetary policy shocks) affect production, inflation, and interest rates are well known.  Moreover, the predicted effect a shock of a given size has on the economy, or the predicted effect a change in policy has on the economy are the same across time.  This leads to ``one-size fits all'' policy prescriptions and an inability to explain the onset of prolonged periods of volatility in inflation and production like what the U.S. experienced in the 1970s and early 1980s.  Macroeconomic shocks can have non-trivial and time-varying effects when expectations are adaptive instead of fully rational.  The purpose of this research is to explain how adaptive expectations affect the vulnerability of the economy to adverse shocks, and how the state of expectations may hinder fiscal policy aimed at fixing such problems.  I will develop a model of adaptive expectations within the context of an otherwise standard dynamic model of the macroeconomy.  The model will provide a general framework for predicting the causes of recessions and expansions and the effectiveness of fiscal policy.  I will then focus on specific recessions experienced in the United States and demonstrate whether and how fiscal policy can effectively address these problems.   }\newline  
+
+\noindent \textit{Keywords}: Learning, expectations, fiscal policy, expenditure multipliers. \\
+\noindent \textit{JEL classification}: C13, E31, E50.
+\end{singlespace}
+\end{titlepage}
+
+\appendix
+\appsection{Model Details}
+\subsection{Consumers}
+A representative consumer chooses consumption ($c_t$), labor supply ($h_t$), purchases of government bonds ($b_t$), and the real value of money holdings ($m_t$) to maximize life time expected utility,
+\beq E_0 \sum_{t=0}^{\infty} \beta^t \left[a_t \log(c_t) - \frac{1}{1+\frac{1}{\eta}} h_t^{1+\frac{1}{\eta}} + \log(m_t) \right] \eeq
+where $a_t$ is a preference shock, $\beta\in(0,1)$ is the discount rate, $\eta\in(0,\infty)$ is the Frisch elasticity of labor supply, and maximum utility is subject to the budget constraint (expressed in real terms):
+\beq c_t + b_t + m_t = (1-\tau_t) w_t h_t + \left(\frac{1+r_{t-1}}{1+\pi_t}\right) b_{t-1} + \left(\frac{1}{1+\pi_t}\right) m_{t-1} + d_t \eeq
+where bonds pay a nominal interest rate of $r_t$, $w_t$ is the real wage, $\pi_t$ denotes the inflation rate, $\tau_t$ is the tax rate on labor income, and $d_t$ are the real value of dividends earned from owning shares in firms.
+
+The first order conditions imply the following conditions for consumption smoothing, labor supply, and money demand, respectively,
+\beq \label{apeq:euler}  \left(\frac{a_t}{c_t}\right) = \beta E_t \left(\frac{a_{t+1}}{c_{t+1}}\right) \left( \frac{1+r_t}{1+\pi_{t+1}} \right)  \eeq
+\beq \label{apeq:lsupply} h_t^{\frac{1}{\eta}} = \left( \frac{a_t}{c_t} \right) (1-\tau_t) w_t  \eeq
+\beq m_t^{-1} = \left(\frac{a_t}{c_t}\right) - \beta E_t \left(\frac{a_{t+1}}{c_{t+1}}\right)\left(\frac{1}{1+\pi_{t+1}}\right) \eeq
+
+\subsection{Firms}
+There is a single final good ($y_t$) produced in a perfectly competitive market using a continuum of intermediate goods ($y_t(i)$) according to the production function,
+\beq \label{apeq:finalprod} y_t = \left[ \int_{0}^{1} y_t(i)^{\frac{\theta_t-1}{\theta_t}}di \right]^{\frac{\theta_t}{\theta_t-1}}, \eeq
+where $\theta_t$ is a time-varying elasticity of substitution.  The intermediate goods are produced in a monopolistically competitive market, so $\theta_t$ is inversely related to the market power each intermediate good firm has.  Therefore the larger is $\theta_t$, the smaller will be the markup of the price of the intermediate good over marginal cost.  In this way, $\theta_t$ serves as a shock affecting costs of production, in which larger values correspond to smaller cost shocks.  Final goods firms profit maximizing demand for each intermediate good is given by,
+\beq \label{apeq:intdem} y_t(i) = \left[ \frac{p_t(i)}{p_t}\right]^{-\theta_t} y_t, \eeq
+where $p_t(i)$ denotes the price of intermdiate good $i$ and $p_t$ denotes the price of the final good.  Subsituting equation (\ref{apeq:intdem}) into (\ref{apeq:finalprod}) leads to the following expression for the price of the final good in terms of the prices of the intermediate goods,
+\beq \label{apeq:price} p_t = \left[ \int_{0}^{1} p_t(i)^{1-\theta_t} di \right]^{\frac{1}{1-\theta_t} }\eeq
+
+Each intermediate good is produced only with labor, $h_t(i)$ and all intermediate goods are subject to an aggregate technology shock, $z_t$.  The intermediate good production function is given by,
+\beq \label{apeq:intprod} y_t = z_t h_t(i), \eeq
+where $z_t$ is a technology shock that has the following random walk process with a positive drift,
+\beq \label{apeq:tech} \log(z_t) = \gamma + \log(z_{t-1}) + \epsilon_{z,t}, \eeq
+where $\gamma$ is equal to the steady state growth rate of output and $\epsilon_{z,t}$ is an independently and normally distributed technology shock with zero mean and variance given by $\sigma_z^2$.
+
+While each intermediate goods firm has market power to choose the price of their good subject to their demand, given in equation (\ref{apeq:intdem}), they face a pricing friction which is modeled with the following explicit quadratic price adjustment cost,
+\beq \frac{\phi}{2} \left[ \left(\frac{p_t(i)}{p_{t-1}(i)}\right) \left(\frac{1}{1+\pi}\right) - 1\right]^2 y_t, \eeq
+where $\phi\in[0,\infty)$ is the price adjustment cost parameter, and $\pi$ is the steady state level of inflation of price for final goods.
+
+Period $t$ real profits for intermediate firm $i$ is given by,
+\beq \label{apeq:profits1} d(i) = \frac{p_t(i)}{p_t} y_t(i) - w_t h_t(i) - \frac{\phi}{2} \left[ \left(\frac{p_t(i)}{p_{t-1}(i)}\right) \left(\frac{1}{1+\pi}\right) - 1\right]^2 y_t. \eeq
+Substituting into equation \ref{apeq:profits1} the demand for intermiate good $i$, equation (\ref{apeq:intdem}), and the production function, equation (\ref{apeq:intprod}), yields the following expression for intermdiate goods firms period $t$ profits,
+
+\beq \label{apeq:profits2} d(i) = \left(\frac{p_t(i)}{p_t}\right)^{1-\theta_t} y_t - w_t \frac{1}{z_t} \left(\frac{p_t(i)}{p_t}\right)^{-\theta_t} y_t - \frac{\phi}{2} \left[ \left(\frac{p_t(i)}{p_{t-1}(i)}\right) \left(\frac{1}{1+\pi}\right) - 1\right]^2 y_t. \eeq
+
+Intermdiate goods firms choose the price for each period $t$ to maximize the following present value function of real life time profits,
+\beq E_o \sum_{t=0}^{\infty} \beta_t \lambda_t d_t(i), \eeq
+where $\lambda_t \equiv \frac{a_t}{c_t}$ is consumers' marginal utility of dividend income.  The first order condition can be simply expressed as,
+\beq \lambda_t \frac{\partial d_t(i)}{\partial p_t(i)} + \beta E_t \lambda_{t+1} \frac{\partial d_{t+1}(i)}{\partial p_t(i)} = 0. \eeq
+Taking appropriate derivatives using equation (\ref{apeq:profits2}) yields the following profit maximizing condition,
+\beq \label{apeq:profitmax} \begin{array}{l}
+\ds (1-\theta_t) \left(\frac{p_t(i)}{p_t}\right)^{1-\theta_t} \frac{1}{p_t(i)} y_t \lambda_t 
++ \theta_t w_t \left(\frac{p_t(i)}{p_t}\right)^{-\theta_t} \frac{1}{p_t(i)} \frac{y_t}{z_t} \lambda_t \\ [1.5pc]
+\ds - \phi \left(\frac{1}{1+\pi}\right) \left[ \left(\frac{p_t(i)}{p_{t-1}(i)}\right) \left(\frac{1}{1+\pi}\right) - 1\right] \frac{1}{p_t(i)} y_t \lambda_t \\ [1.5pc]
+\ds + \beta \phi \left(\frac{1}{1+\pi}\right) \left[ \left(\frac{p_{t+1}(i)}{p_{t}(i)}\right) \left(\frac{1}{1+\pi}\right) - 1\right] \frac{p_{t+1}(i)}{p_t(i)^2} y_{t+1} \lambda_{t+1} = 0 \end{array}. \eeq
+Each intermediate goods firm faces the exactly this profit maximizing condition, so all firms choose the same price, $p_t(i)$, which implies $p_t(i)=p_t$.  Substituting this symmetric equilibrium condition along with the utility maximizing expression for $\lambda_t$ into equation (\ref{apeq:profitmax}), and multiplying the entire equation by $p_t(i)$ leads to the following aggregate supply relationship,
+\beq \label{apeq:as} \begin{array}{l} \ds (1-\theta_t) \left(\frac{a_t}{c_t}\right) y_t  + \theta_t w_t \left(\frac{a_t}{c_t}\right) \left( \frac{y_t}{z_t} \right)
+- \phi \frac{(\pi_t - \pi)}{(1+\pi)^2}  \left(\frac{a_t}{c_t}\right) y_t \\ [1pc]
+\ds +\beta \phi E_t \frac{(\pi_{t+1} - \pi)(1+\pi_{t+1})}{(1+\pi)^2}  \left(\frac{a_{t+1}}{c_{t+1}}\right) y_{t+1} = 0\end{array} \eeq
+The symmetric equilibrium also implies all intermediate goods firms produce the same quantity of goods, and equation (\ref{apeq:finalprod}) then implies that $y_t(i) = y_t$.  Combining this with the production function for intermediate goods firms, equation (\ref{apeq:intprod}), leads to the condition, $h_t = y_t/z_t$.  Subsituting this for $h_t$ in the consumers' labor supply condition, equation (\ref{apeq:lsupply}), leads to the following labor market equilibrium expression for the real wage,
+\beq \label{apeq:wage} w_t = \left(\frac{1}{1-\tau_t}\right) \left(\frac{c_t}{a_t}\right) \left(\frac{y_t}{z_t}\right)^{\frac{1}{\eta}}. \eeq 
+
+\subsection{Log-linearization}
+We pause at this point to derive log-linear conditions for consumer and producer sides of the model.  Many variables in the model do not have a steady state, but rather a steady growth path since the random walk technology process specified in equation (\ref{apeq:tech} includes a positive drift.  The equations from the previous subsection can be rewritten in stationary terms: $c_t/z_t$, $y_t/z_t$, and $w_t/z_t$.  Linearizing the Euler equation for consumption smoothing, equation (\ref{apeq:euler}), yields,
+\beq \label{apeq:is} \hat{c}_t = E_t \hat{c}_{t+1} - (\hat{r}_t - E_t \hat{\pi}_{t+1}) + \hat{a}_t - E_t \hat{a}_{t+1}, \eeq
+where $\hat{c}_t$ denotes the percentage devation of $c_t/z_t$ from its steady state, $\hat{r}_t$ and $\hat{\pi}_{t}$ denote the absolute deviation of the interest rate and inflation rate from its steady states, and $\hat{a}_{t+1}$ denotes the percentage deviation of the preference shock, $a_t$, from its steady state.  Let the preference shock evolve according to,
+\beq \label{apeq:prefshock} \hat{a}_t = \rho \hat{a}_{t-1} + \epsilon_{a,t}, \eeq
+where $\epsilon_{a,t}$ is iid with zero mean and variance, $\sigma_a^2$.
+
+Linearizing the aggregate supply relationship, equation (\ref{apeq:as}), leads to a Phillips curve,
+\beq \label{apeq:phillips} \hat{\pi}_t = \beta E_t \hat{\pi}_{t+1} + \left(\frac{\theta-1}{\phi}\right) \hat{w}_t - \frac{\theta}{\phi} \hat{\theta}_t, \eeq
+where $\hat{w}_t$ is the percentage deviation of $w_t/z_t$ from its steady state, $\hat{\theta}_t$ is the percentage deviation of $\theta_t$ from its steady state.  Let $\hat{\theta}_t$ evolve according to the exogenous process,
+\beq \label{eq:costshock} \hat{\theta}_t = \rho_\theta \hat{\theta}_{t-1} + \epsilon_{\theta,t}, \eeq
+where $\epsilon_{\theta,t}$ is an iid shock with zero mean and variance, $\sigma^2_{\theta}$.
+
+Linearizing the labor market equilibrium expression for wage, equation (\ref{apeq:wage}), yields,
+\beq \label{apeq:lwage} \hat{w}_t = \frac{1}{\eta} \hat{y}_t + \hat{\tau}_t - \hat{a}_t + \hat{c}_t, \eeq
+where $\hat{\tau}_t$ is the deviation of the labor tax rate from its average value.
+
+We will see below that monetary and fiscal policy may want to respond to the output gap, the percentage deviation of real GDP from potential GDP, where potential GDP is the level that would exist absent of any nominal frictions.  Let a $\hat{s}_t^*$ denote the ``potential'' level a variable $\hat{s}_t$, that is, the value it would take in an equilibrium with a model absent of any nominal frictions.  The output gap is given by,
+\beq \label{apeq:gap} \hat{x}_t \equiv \hat{y}_t - \hat{y}_t^*. \eeq
+To find potential output, we also evaluate the above equations in a frictionless economy.  Equations (\ref{apeq:is}), (\ref{apeq:phillips}), and (\ref{apeq:lwage}) imply,
+\beq \label{apeq:isp} \hat{c}_t^* = E_t \hat{c}_{t+1}^* - (\hat{r}_t^* - E_t \hat{\pi}^*_{t+1}) + \hat{a}_t - E_t \hat{a}_{t+1}, \eeq
+\beq \label{apeq:phillipsp} \hat{w}_t^* = \frac{\theta}{\theta-1} \hat{\theta}_t, \eeq
+\beq \label{apeq:lwagep} \hat{w}^*_t = \frac{1}{\eta} \hat{y}^*_t + \hat{\tau}_t - \hat{a}_t + \hat{c}^*_t, \eeq
+
+\subsection{Discretionary Policy}
+
+We now turn to specifying discretionary monetary and fiscal policies which contribute to the determination of the interest rate, tax rate, and level of government spending.  Begining with monetary policy, I suppose the central bank chooses an interest rate according to the following equation, resembling a \citee{taylor1993} rule,
+\beq \hat{r}_t = \rho \hat{r}_{t-1} + (1-\rho) (\psi_{\pi} \hat{\pi}_t + \psi_{x} \hat{x}_t + \psi_y \hat{v}_{y,t}) + \epsilon_{r,t}, \eeq
+where the parameters $\psi_{\pi} \in [0,\infty)$, $\psi_x\in [0,\infty)$, and $\psi_y \in [0,\infty)$ capture the feedback on the interest rate of inflation, the output gap, and the growth rate of output, respectively.  The term $\epsilon_{r,t}$ is an independently normally distributed monetary policy shock with zero mean and variance given by $\sigma_r^2$, and $\hat{v}_{y,t}$ denotes the difference of the growth rate of output from its steady state growth rate, $\gamma$, which is given by,
+\beq \hat{v}_{y,t} = \hat{y}_t - \hat{y}_{t-1} + \epsilon_{z,t}. \eeq
+
+
+
+\end{document}
+
+
+

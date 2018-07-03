@@ -1,0 +1,95 @@
+\documentclass[12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{calc}
+\usepackage{setspace}
+\usepackage{multicol}
+\usepackage{fancyheadings}
+
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{rotating}
+\usepackage{harvard}
+\usepackage{aer}
+\usepackage{aertt}
+\usepackage{verbatim}
+
+\setlength{\voffset}{0in}
+\setlength{\topmargin}{0pt}
+\setlength{\hoffset}{0pt}
+\setlength{\oddsidemargin}{0pt}
+\setlength{\headheight}{0pt}
+\setlength{\headsep}{0.4in}
+\setlength{\marginparsep}{0pt}
+\setlength{\marginparwidth}{0pt}
+\setlength{\marginparpush}{0pt}
+\setlength{\footskip}{0.1in}
+\setlength{\textwidth}{6.5in}
+\setlength{\textheight}{8.5in}
+\setlength{\parskip}{0pc}
+
+\renewcommand{\baselinestretch}{1.5}
+
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bd}{\begin{description}}
+\newcommand{\ed}{\end{description}}
+\newcommand{\prbf}[1]{\textbf{#1}}
+\newcommand{\prit}[1]{\textit{#1}}
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\newcommand{\beqa}{\begin{eqnarray}}
+\newcommand{\eeqa}{\end{eqnarray}}
+\newcommand{\bdm}{\begin{displaymath}}
+\newcommand{\edm}{\end{displaymath}}
+\newcommand{\script}[1]{\begin{cal}#1\end{cal}}
+\newcommand{\citee}[1]{\citename{#1} (\citeyear{#1})}
+\newcommand{\h}[1]{\hat{#1}}
+\newcommand{\ds}{\displaystyle}
+
+
+\newcommand{\appsection}[1]
+{
+\let\oldthesection\thesection
+\renewcommand{\thesection}{Appendix \oldthesection:}
+\section{#1}
+\let\thesection\oldthesection
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+\setcounter{equation}{0}
+}
+
+\pagestyle{fancyplain}
+\lhead{}
+\chead{Fiscal and Expenditure Multipliers with Adaptive Expectations}
+\rhead{\thepage}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+
+\begin{document}
+
+\begin{titlepage}
+\begin{singlespace}
+\title{\vspace*{-1in}Fiscal and Expenditure Multipliers When There are Adaptive Expectations}
+\date{\today}
+\author{James Murray\\
+Department of Economics\\
+University of Wisconsin - La Crosse\footnote{\textit{Mailing address}: 1725 State St., La Crosse, WI  54601. \textit{E-mail address}: murray.jame@uwlax.edu.  \textit{Phone number}: (608)406-4068.}}
+
+\maketitle
+
+\thispagestyle{empty}
+
+\abstract{Using linearized dynamic stochastic general equilibrium models with rational expectations is a popular methodology in the macroeconomics and monetary economics literature.  In particular, the rational expectations New Keynesian model provides a well-understood framework conducive to discussion between researchers covering theoretical and empirical macroeconomics.  Unfortunately, these models come with the unrealistic prediction that when the economy is hit with a shock, the impulse responses are the same across time, independent of the state of the economy or the state of expectations, and are symmetric compared to equally sized shocks of the opposite sign.   This leads to ``one-size fits all'' policy prescriptions and an inability to explain the onset of prolonged periods of volatility in inflation and production like what the U.S. experienced in the 1970s and early 1980s.  Macroeconomic shocks can have non-trivial and time-varying effects when expectations are not fully rational, but instead evolve according to a non-linear adaptive expectations mechanism such as least-squares learning.  The purpose of this research is to explain how least squares learning affects the vulnerability of the economy to adverse shocks, and how the state of expectations may hinder fiscal policy aimed at fixing such problems.  I incorporate constant gain least squares learning into a New Keynesian model with endogenous capital and fiscal policy rules for government spending and distorting taxes on labor and capital rental income.  In such a model, expectations depend on learning agents' perceptions of fiscal policy behavior in addition to their perceptions of the dynamic behavior of the rest of the economy.  I estimate the model with quarterly U.S. data to predict time-varying impulse response functions to demand shocks including consumption preferences and investment spending, and time-varying responses to fiscal policy actions (whether these be shocks, consistent with the policy rule, or some combination).  I use these predictions to measure time-varying expenditure and fiscal policy multipliers.  The former provides explanations for recent U.S. recessions, and the latter is used to evaluate the effectiveness of fiscal policy during recessionary episodes.}\newline  
+
+\noindent \textit{Keywords}: Learning, expectations, fiscal policy, expenditure multipliers. \\
+\noindent \textit{JEL classification}: C13, E31, E50.
+\end{singlespace}
+\end{titlepage}
+
+
+\end{document}
+
+
+

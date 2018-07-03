@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{calc}
+\usepackage{setspace}
+\usepackage{multicol}
+\usepackage{fancyheadings}
+
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{rotating}
+\usepackage{harvard}
+\usepackage{aer}
+\usepackage{aertt}
+\usepackage{verbatim}
+
+\setlength{\voffset}{0in}
+\setlength{\topmargin}{0pt}
+\setlength{\hoffset}{-0.5in}
+
+\setlength{\oddsidemargin}{0pt}
+\setlength{\headheight}{0pt}
+\setlength{\headsep}{0.4in}
+\setlength{\marginparsep}{0pt}
+\setlength{\marginparwidth}{0pt}
+\setlength{\marginparpush}{0pt}
+
+\setlength{\footskip}{.1in}
+\setlength{\textwidth}{7in}
+\setlength{\textheight}{9in}
+\setlength{\parskip}{0pc}
+
+\renewcommand{\baselinestretch}{1.4}
+
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\be}{\begin{enumerate}\setlength{\leftmargin}{0pt}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bd}{\begin{description}}
+\newcommand{\ed}{\end{description}}
+\newcommand{\prbf}[1]{\textbf{#1}}
+\newcommand{\prit}[1]{\textit{#1}}
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\newcommand{\beqa}{\begin{eqnarray}}
+\newcommand{\eeqa}{\end{eqnarray}}
+\newcommand{\bdm}{\begin{displaymath}}
+\newcommand{\edm}{\end{displaymath}}
+\newcommand{\script}[1]{\begin{cal}#1\end{cal}}
+\newcommand{\citee}[1]{\citename{#1} (\citeyear{#1})}
+\newcommand{\h}[1]{\hat{#1}}
+\newcommand{\ds}{\displaystyle}
+
+\newcommand{\app}
+{
+\appendix
+}
+
+\newcommand{\appsection}[1]
+{
+\let\oldthesection\thesection
+\renewcommand{\thesection}{Appendix \oldthesection}
+\section{#1}\let\thesection\oldthesection
+\renewcommand{\theequation}{\thesection\arabic{equation}}
+\setcounter{equation}{0}
+}
+
+\pagestyle{fancyplain}
+\lhead{}
+\chead{CBA Proposal: Fiscal and Expenditure Multipliers with Adaptive Expectations}
+\rhead{\thepage}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+
+\begin{document}
+\thispagestyle{empty}
+\begin{center}
+\textbf{CBA FACULTY/ACADEMIC STAFF SUMMER RESEARCH GRANT}\\
+\textbf{PROGRESS REPORT}\\
+\end{center}
+
+\noindent PROPOSAL TITLE: Fiscal and Expenditure Multipliers When There are Adaptive Expectations\\
+RECIPIENT: James Murray, Department of Economics\\
+
+I am pleased to report making timely progress on this research project.  In my proposal I indicated over summer 2011 I would develop and write a computer program for a dynamic stochastic general equilibrium model with adaptive expectations that will serve as a framework to answer the question on how fiscal stimulus and expenditure shocks affect the macroeconomy.  The issue at hand is that most of the macroeconomics literature makes the assumption of rational expectations (non-adaptive expectations) which together with other common assumptions leads to conclusions that fiscal stimulus and expenditure shocks should have symmetric effects on the economy, regardless of time, the severity of the macroeconomic situation, and the expectations people hold.  
+
+I did successfully develop this model over the summer, but I ran into a issue that consumed extra time, but at the same time introduced a complexity that gives my project greater interest.  At the core of the model and my hypothesis for this issue is that the effect of fiscal stimulus depends on adaptive expectations.  The issue I came across is that while it is relatively straight forward to incorporate adaptive expectations into common models used in this literature, it was a non-trivial extension to introduce adaptive expectations concerning future fiscal policy decisions, including expectations concerning the size of government debt, expectations on future tax rates, and expectations on future government spending.  Nonetheless, I did successfully develop a model over the summer taking into account these issues, and I have just begun writing the computer program for the model. 
+
+Also this summer, I have surveyed the relevant fiscal policy literature to prepare writing the introduction and literature review sections of the paper, which I plan to begin soon.  I do plan to continue following the time-line specified in my proposal to complete this paper over the course of this academic year.  The funding supported some significant steps in starting this project and getting the model ready to estimate and begin receiving feedback from colleagues in my field.
+  
+\end{document}
+
+
+
